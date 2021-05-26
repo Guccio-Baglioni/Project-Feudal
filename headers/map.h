@@ -1,5 +1,5 @@
-#ifndef MAP_GENERATION_H
-#define MAP_GENERATION_H
+#ifndef MAP_H
+#define MAP_H
 
 
 /**
@@ -47,7 +47,8 @@ typedef enum climate{
   MEDITARREAN,
   MILD,
   COLD,
-  GLACIAL  
+  GLACIAL,
+  MOUNTAIN  
 }climate_e;
 
   /**
@@ -89,4 +90,4 @@ typedef struct map{
 
 
 
-#endif // MAP_GENERATION_H
+#endif // MAP_H
