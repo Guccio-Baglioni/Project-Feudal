@@ -2,7 +2,8 @@
 #define MAP_GENERATOR_H
 
 typedef enum typeMap{
- PARALLELOGRAMS
+ HEXAGON,
+ PARALLELOGRAM
 }typeMap_n;
 
 #endif //MAP_GENERATOR_H

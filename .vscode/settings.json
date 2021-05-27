@@ -2,7 +2,7 @@
  "files.associations": {
   "error.h": "c",
   "mapiteration.h": "c",
-  "hexmapiteration.c": "cpp",
+  "hexmapiteration.c": "c",
   "tests.h": "c"
  }
 }

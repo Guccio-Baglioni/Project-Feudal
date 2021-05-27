@@ -12,18 +12,18 @@ int *coord;
 //test
 void testMapIteration1(void){
 
- coord[1] = -4;
+ coord[1] = -6;
 
  int compteur = 0;
 
- while(mapIteration1(coord, 4)){
+ while(mapIteration1(coord, 5)){
   compteur++;
   if (compteur == 28){
-   CU_ASSERT_EQUAL(coord[0], -2);
-   CU_ASSERT_EQUAL(coord[1], 1);
+   CU_ASSERT_EQUAL(coord[0], 6);
+   CU_ASSERT_EQUAL(coord[1], -2);
   }
  }
- CU_ASSERT_EQUAL(compteur,48)
+ CU_ASSERT_EQUAL(compteur,91)
 }
 
 /*___________________________________________________________________________________________________*/
