@@ -9,7 +9,6 @@
   /**
    * @enum type
    *  describe all the different types of soils in a cellule
-   *  
    */
   typedef enum type{
       SEA,                //0
@@ -55,13 +54,13 @@ typedef enum climate{
    * @struct cellule
    *  describe a cellule of the map (a 50m*50m square)
    * 
-   *  @int altitude 
+   *  @param altitude int
    *    int from 0 to 10, define the altitude of the cellule where 1 is the sea floor
    * 
-   *  @type_e type
+   *  @param type type_e
    *    int that define the type of the ground, the types are defined in the type enumeration
    * 
-   *  @climate_e climate
+   *  @param climate climate_e
    *    define the climate of the cellule 
    *  
    */
@@ -77,10 +76,10 @@ typedef struct cellule{
  /** @struct map
   * strcture where the map of a world is saved
   * 
-  *   @int size 
+  *   @param size int
   *     the length of the map (size = length*length)
   * 
-  *   @cellule_t **cellules;
+  *   @param cellules; cellule_t **
   *     
   */
 typedef struct map{

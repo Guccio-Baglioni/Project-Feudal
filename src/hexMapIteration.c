@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-// coordinates doit être maloqué et avec coordinates[1] = -lenth
+#include "../headers/mapIteration.h"
 
-bool mapIteration(int *coordinates, int length){
+// coordinates doit être maloqué et avec coordinates[1] = -length
+bool mapIteration1(int *coordinates, int length){
 
 
  if (coordinates[1] == -length){

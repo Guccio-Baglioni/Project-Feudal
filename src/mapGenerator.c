@@ -1,4 +1,5 @@
 #include"../headers/mapGenerator.h"
+#include"../headers/error.h"
 
 #include <stdlib.h>
 #include <stdio.h>
