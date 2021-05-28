@@ -46,9 +46,7 @@ map_t *mapGenerator(const int length, const mapType_n mapType){
  coordinates = malloc(sizeof(int)*2);
  mallocCheck(coordinates);
 
-  // to do : x length = 2*length + 1
-  // make ylenth(coordinates[0], mapType_n)
-  // mapType_e ou mapType_n?
+
 
   
 
