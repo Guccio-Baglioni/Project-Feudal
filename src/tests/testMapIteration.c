@@ -10,13 +10,13 @@ int *coord;
 /*___________________________________________________________________________________________________*/
 
 //test
-void testMapIteration1(void){
+void testHexMapIterator(void){
 
  coord[1] = -6;
 
  int compteur = 0;
 
- while(mapIteration1(coord, 5)){
+ while(hexMapIterator(coord, 5)){
   compteur++;
   if (compteur == 28){
    CU_ASSERT_EQUAL(coord[0], 6);
@@ -26,12 +26,27 @@ void testMapIteration1(void){
  CU_ASSERT_EQUAL(compteur,91)
 }
 
+void testParalMapIterator(void){
+
+ coord[1] = -6;
+
+ int compteur = 0;
+
+ while(paralMapIterator(coord, 5)){
+  compteur++;
+  if (compteur == 15){
+   CU_ASSERT_EQUAL(coord[0], 2);
+   CU_ASSERT_EQUAL(coord[1], 2);
+  }
+ }
+ CU_ASSERT_EQUAL(compteur,36)
+}
 /*___________________________________________________________________________________________________*/
 
 
 int setup(void){
  coord = malloc(sizeof(int)*2);
- mallocError(coord);
+ mallocCheck(coord);
  return 0;
  }
 
@@ -62,7 +77,8 @@ int main(int argc, const char *argv[]) {
  
  
      
- if ((NULL == CU_add_test(test, "number 1 manner of iterating test", testMapIteration1))){
+ if ((NULL == CU_add_test(test, "test iterating in an hexagonal map", testHexMapIterator     ))  ||
+     (NULL == CU_add_test(test, "test iterating in a parallelogram map", testParalMapIterator))  ){
   CU_cleanup_registry();
   return CU_get_error();
  }

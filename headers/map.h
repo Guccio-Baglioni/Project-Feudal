@@ -6,11 +6,21 @@
  * @file mapGeneration.h
  */
 
+
+/**
+ * @enum typeMap_
+ *  enumerate all the types iterator in this file 
+ */
+typedef enum mapType{
+ HEXAGON,
+ PARALLELOGRAM
+}mapType_n;
+
   /**
    * @enum type
    *  describe all the different types of soils in a cellule
    */
-  typedef enum type{
+  typedef enum celluleType{
       SEA,                //0
       RIVER,              //1
       LAKE,               //2
@@ -18,7 +28,7 @@
       SAND,               //4
       ROCK,               //5
      // FERTILE_SOIL        //6
-  }type_e;
+  }celluleType_e;
 
 
   /**
@@ -66,7 +76,7 @@ typedef enum climate{
    */
 typedef struct cellule{
   int altitude;
-  type_e type;
+  celluleType_e celluleType;
   staticRessource_e staticRessource;
   climate_e climate; 
 }cellule_t;
@@ -76,15 +86,23 @@ typedef struct cellule{
  /** @struct map
   * strcture where the map of a world is saved
   * 
-  *   @param size int
+  *   @param length int
   *     the length of the map (size = length*length)
+  * 
+  *   @param mapType mapType_n
+  *     indicate the type of the map
+  * 
+  *   @param iterationFunc map_iterator_func_f
+  *     a function to use to iterate on the map
   * 
   *   @param cellules; cellule_t **
   *     
   */
 typedef struct map{
- int length;
- cellule_t **cellules;
+  int length;
+  mapType_n mapType;
+  map_iterator_func_f iterationFunc;
+  cellule_t **cellules;
 } map_t;
 
 

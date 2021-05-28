@@ -10,5 +10,5 @@
 #include <stdio.h>
 
 
-#include "../../src/hexMapIteration.c"
+#include "../../src/mapIteration.c"
 #include "../../src/error.c"

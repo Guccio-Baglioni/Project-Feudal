@@ -16,6 +16,11 @@ game: $(OBJ)
 %.o: %.c               
 	$(CC) $(INCLUDE_HEADERS_DIRECTORY) -o $@ -c $<
 
+clean:
+	rm -f game
+	rm -f *.o
+	rm -f src/*.o
+	rm -f src/tests/*.o
 
 
 tests: 
@@ -25,8 +30,8 @@ tests:
 testIteration: 
 	@echo $(SEPARATION)"Begin test iteration on hex map\n"
 	@cd ./src/tests && \
-		$(CC) -g testHexMapIteration.c -o testHexMapIteration -Wall -Werror -lcunit && \
-		valgrind --leak-check=full --show-leak-kinds=all ./testHexMapIteration && \
-		rm ./testHexMapIteration 
+		$(CC) -g testMapIteration.c -o testMapIteration -Wall -Werror -lcunit && \
+		valgrind --leak-check=full --show-leak-kinds=all ./testMapIteration && \
+		rm ./testMapIteration 
 	@echo "\nEnd test iteration on hex map\n"$(SEPARATION)
 

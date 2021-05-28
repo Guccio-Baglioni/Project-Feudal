@@ -4,9 +4,10 @@
 
 #include"../headers/error.h"
 
-void mallocError(void *ptr){
+void mallocCheck(void *ptr){
  if (ptr==NULL){
   fprintf(stderr, "Error while allocating memory\n");
   exit(-1);
  }
 }
+

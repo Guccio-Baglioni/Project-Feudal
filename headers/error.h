@@ -8,11 +8,13 @@
 
 
 /**
- * void function theat test the return of the malloc function
+ * void function, test the return of the malloc function
  * @param ptr void* : malloc pointer to be tested
  * @return void
  **/ 
 
-void mallocError(void *ptr);
+void mallocCheck(void *ptr);
+
+
 
 #endif //ERROR_H
